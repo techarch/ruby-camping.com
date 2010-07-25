@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Camping, a Ruby Microframework</title>
+		<meta name="description" content="Promotional site for the Ruby Camping web framework" />
+		<meta name="keywords" content="Ruby, Camping, Ruby Camping, _why, why went camping" />
+		
+		<link type="text/css" href="css/smoothness/jquery-ui-1.8.2.custom.css" rel="stylesheet" />	
+		<!-- <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+		<!-- <script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script> -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+
+		<link rel="stylesheet" media="screen" type="text/css" href="./css/slideshow.css"/>
+		<script type="text/javascript" charset="utf-8" src="./js/slideshow.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="./syntax-highlighter/styles/shCore.css" />
+		<link type="text/css" rel="stylesheet" href="./syntax-highlighter/styles/shThemeFadeToGrey.css" />
+		<script type="text/javascript" src="./syntax-highlighter/scripts/shCore.js"></script>
+		<script type="text/javascript" src="./syntax-highlighter/scripts/shBrushRuby.js"></script>
+		<link type="text/css" href="css/default.css" rel="stylesheet" />	
+		
+		<script type="text/javascript">
+			$(function(){			
+				//hover states on the static widgets
+				$('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); }, 
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="campsite">
+			<img id="sky" src='img/campsite/rc-sky.gif' />
+			<img id="mountains" src='img/campsite/rc-mountains.gif' />
+			<img id="forest" src='img/campsite/rc-forest.gif' />
+			<img id="tent" src='img/campsite/rc-tent.gif' />
+			<img id="ruby" src='img/campsite/rc-ruby.gif' />
+			<img id="ruby" src='img/campsite/rc-ruby.gif' />
+		</div>
+		
+		<div id="content">
+			<h1>Camping, a Ruby Microframework</h1>
+			<img id="sign" src='img/campsite/rc-sign.gif' />
+			
+					<div id='camping_slideshow'>
+					
+						<div id="slideshow">
+							<div id="slidesContainer">
+
+								<div class="slide">
+									<h2>Fast To Learn</h2>
+									<a href='http://wiki.github.com/camping/camping/short-example'>
+										<p>Learning Camping only requires basic Ruby skills. </p>
+										<img src='img/slides/ruby.gif'>
+									</a>
+<pre class="brush: ruby; toolbar: false; gutter: false;">
+require 'camping'
+Camping.goes :Blog
+module Blog end
+</pre>
+								</div>
+							
+								<div class="slide">
+									<h2>Camping Is Simple Yet Powerful</h2>
+									<a href='http://wiki.github.com/camping/camping/rules-of-thumb'>
+										<p>Camping is simpler than Rails, but yet still follows the MVC pattern unlike Sinatra and Padrino.</p>
+									</a>
+<pre class="brush: ruby; toolbar: false; gutter: false;">
+require 'camping'
+Camping.goes :Blog
+module Blog 
+	module Models end
+	module Controllers end
+	module Views end
+end
+</pre>
+								</div>
+							
+								<div class="slide">
+									<h2>Camping Is Lightning Fast</h2>
+									<a href='#4'>
+										<p>Camping is built on Rack and is very compact making web apps fast to load/run and memory efficient.</p>
+									</a>
+									<p>The whole web microframework source code consistently stays at less than 4kB. You can probably view the complete source code on a single page.</p>
+								</div>	
+								
+								<div class="slide">
+									<h2>Camping Model Persistence Is Up To You</h2>
+									<a href='#'>
+										<p>Although Camping has an affinity for ActiveRecord, you can use your favorite ORM with it (e.g. MongoDB)</p>
+									</a>
+									<p>If you choose ActiveRecord, Camping will manage a default Sqlite database and let you define schema migrations using classes.</p>
+<pre class="brush: ruby; toolbar: false; gutter: false;">
+    class BlogInitialSchemaCreation &lt; V 1.0
+      def self.up
+        create_table :blog_posts, #...
+      end
+      
+      def self.down
+        drop_table :blog_posts
+      end
+    end
+</pre>
+								</div>
+								
+								<div class="slide">
+									<h2>Camping Views Are Flexible</h2>
+									<a href='#'>
+										<p>You can mix and match different view engines such as:</p>
+									</a>
+									<ul>
+										<li>ERB - mix HTML and Ruby fragments</li>
+										<li>HAML</li>
+										<li>Markaby</li>
+										<li>...</li>
+									</ul>
+								</div>
+							
+								<div class="slide">
+									<h2>Camping Runs On IronRuby Too</h2>
+									<a href='http://blog.monnet-usa.com/?p=166'>
+										<p>IronRuby can run Camping web apps on IIS using IronRack</p>
+										<img src='http://blog.monnet-usa.com/wp-content/ironcamping.png'>
+									</a>
+								</div>
+								
+								<div class="slide">
+									<h2>Camping Controllers Are Easy</h2>
+									<a href='#http://rdoc.info/rdoc/camping/camping/blob/fa8802511fd745dedcbeab61d809ddf15af80e43/Camping/Controllers.html'>
+										<p>Controller routes are declared at the same time as the controller definition:</p>
+									</a>
+<pre class="brush: ruby; toolbar: false; gutter: false;">
+class Edit < R '/post/(\d+)/edit'
+  def get(post_id) end
+  def post(post_id) end
+end										
+</pre>
+								</div>
+								
+								<div class="slide">
+									<h2>Add Features With Plugins</h2>
+									<a href='http://wiki.github.com/camping/camping/miscellaneous-camping-links'>
+										<p>Camping is extensible, allowing you to add functionality using plugins such as:</p>
+									</a>
+									<ul>
+										<li>REST</li>
+										<li>OAuth</li>
+										<li>...</li>
+									</ul>
+								</div>
+								
+								<div class="slide">
+									<h2>What Can You Build With Camping?</h2>
+									<a href='http://wiki.github.com/camping/camping/miscellaneous-camping-links'>
+										<p>Camping is great for:</p>
+									</a>
+									<ul>
+										<li>Web Sites</li>
+										<li>Internal Web Apps</li>
+										<li>Web Services</li>
+									</ul>
+								</div>
+								
+								<div class="slide">
+									<h2>Camping Was Created By _Why</h2>
+									<a href='http://en.wikipedia.org/wiki/Why_the_lucky_stiff'>
+										<p>Why The Lucky Stiff originally created Camping. 
+										The community is active and continues to evolve the framework.</p>
+									</a>
+									<img src='./img/slides/the.foxes-4c.png' />
+								</div>	
+								
+							</div>
+						</div>
+						
+						<script  type="text/javascript">
+							var autostart_slideshow  = true; 
+							var slide_viewing_time = 15000;
+							SyntaxHighlighter.all();						
+						</script>
+					</div>
+			
+								
+			<a href="http://github.com/camping/camping">
+				<div id='callout-go-camping' >
+					<span>Go<br/>Camping<br/>With Us!</span>
+				</div>
+			</a>
+			<a href="http://wiki.github.com/camping/camping/">
+				<div id='callout-learn-camping' >
+					<span>Check-Out<br/>The<br/>Camping Guide</span>
+				</div>
+			</a>
+			<a href="http://rubyforge.org/mailman/listinfo/camping-list">
+				<div id='callout-join-in' >
+					<span>Visit<br/>The<br/>Community</span>
+				</div>
+			</a>
+		</div>
+	</body>
+
+</html>
+
+

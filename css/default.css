@@ -1,0 +1,186 @@
+body
+{
+	background: #669944 ;
+	width: 1280px;
+}
+
+h1
+{
+	color:white;
+	font-family:verdana;
+	text-align:center;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+#campsite
+{
+	z-index: -1000;
+}
+
+#campsite > img
+{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#campsite #tent
+{
+}
+
+#content
+{
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+}
+
+#sign
+{
+	position: absolute;
+	left: 50%;
+	top: 400%; /* 470% */;
+}
+
+#camping_slideshow
+{
+	position: absolute;
+	left: 50%;
+	top: 458%; /* 529%; */
+	margin-left:100px;
+	width: 460px;
+}
+
+div#slideshow {
+	width: 460px;
+	height: 320px;
+}
+
+#slideshow #slidesContainer {
+	width: 380px; 
+	height: 344px;
+}
+
+#slideshow #slidesContainer .slide {
+	height: 320px;
+}
+
+#slideshow #slidesContainer .slide img {
+	text-decoration: none;
+	border: none;
+}
+
+.slide
+{
+	font-size: 10pt;
+	font-family: Verdana, Arial;
+	color: white;
+}
+
+.slide h2
+{
+	font-size: 12pt;
+}
+
+.control {
+	height: 320px;
+}			
+
+#slideshow_control_panel
+{
+	bottom:2px;
+}
+
+#callout-go-camping
+{
+	width: 189px;
+	height: 130px;
+	background: url(../img/campsite/rc-callouts.gif) no-repeat 0px 2px;
+	position: absolute;
+	left: 0%;
+	/* bottom: -2.5%; */
+	top: 870%;
+	z-index: 2000;
+	margin: 10px;
+	text-align: center;
+}
+
+#callout-go-camping:hover
+{
+	background-position: -304px 0px;
+}
+
+#callout-go-camping span
+{
+	color: white;
+	font-family:Helvetica;
+	font-weight: bolder;
+	font-size: 14pt;
+	position:relative;
+	top:45px;			
+}
+
+#callout-learn-camping
+{
+	width: 189px;
+	height: 128px;
+	background: url(../img/campsite/rc-callouts2.gif) no-repeat 0px -125px;
+	position: absolute;
+	left: 18%;
+	top: 870%;
+	/*bottom: -1.5%;*/
+	z-index: 2000;
+	margin: 10px;
+	text-align: center;
+}
+
+#callout-learn-camping:hover
+{
+	background-position: -304px  -128px;
+}
+
+#callout-learn-camping span
+{
+	color: white;
+	font-family:Helvetica;
+	font-weight: bolder;
+	font-size: 14pt;
+	position:relative;
+	top:45px;			
+}
+
+#callout-join-in
+{
+	width: 189px;
+	height: 128px;
+	background: url(../img/campsite/rc-callouts3.gif) no-repeat 0px -254px;
+	position: absolute;
+	left: 36%;
+	/* bottom: -1.5%;*/
+	top: 870%;
+	z-index: 2000;
+	margin: 10px;
+	text-align: center;
+}
+
+#callout-join-in:hover
+{
+	background-position: -304px  -256px;
+}
+
+#callout-join-in span
+{
+	color: white;
+	font-family:Helvetica;
+	font-weight: bolder;
+	font-size: 14pt;
+	position:relative;
+	top:45px;			
+}			
