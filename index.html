@@ -4,12 +4,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>Camping, a Ruby Microframework</title>
 		<meta name="description" content="Promotional site for the Ruby Camping web framework" />
-		<meta name="keywords" content="Ruby, Camping, Ruby Camping, _why, why went camping" />
+		<meta name="keywords" content="Ruby, Camping, Ruby Camping, ruby-camping,ruby microframework,ruby micro-framework, ruby framework,ruby web framework,ruby rest framework,ruby camping framework,camping framework,_why, why went camping,campingrb" />
 		
 		<link type="text/css" href="css/smoothness/jquery-ui-1.8.2.custom.css" rel="stylesheet" />	
-		<!-- <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
-		<!-- <script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script> -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
 
 		<link rel="stylesheet" media="screen" type="text/css" href="./css/slideshow.css"/>
@@ -28,24 +26,21 @@
 					function() { $(this).addClass('ui-state-hover'); }, 
 					function() { $(this).removeClass('ui-state-hover'); }
 				);
-				
 			});
 		</script>
 	</head>
 	
 	<body>
 		<div id="campsite">
-			<img id="sky" src='img/campsite/rc-sky.gif' />
-			<img id="mountains" src='img/campsite/rc-mountains.gif' />
-			<img id="forest" src='img/campsite/rc-forest.gif' />
-			<img id="tent" src='img/campsite/rc-tent.gif' />
-			<img id="ruby" src='img/campsite/rc-ruby.gif' />
-			<img id="ruby" src='img/campsite/rc-ruby.gif' />
+			<img id="sky" src='img/campsite/rc-sky.gif' alt="sky"/>
+			<img id="mountains" src='img/campsite/rc-mountains.gif' alt="mountains"/>
+			<img id="forest" src='img/campsite/rc-forest.gif' alt="forest"/>
+			<img id="tent" src='img/campsite/rc-tent.gif' alt="tent"/>
 		</div>
 		
 		<div id="content">
 			<h1>Camping, a Ruby Microframework</h1>
-			<img id="sign" src='img/campsite/rc-sign.gif' />
+			<img id="sign" src='img/campsite/rc-sign.gif' alt="camping site sign"/>
 			
 					<div id='camping_slideshow'>
 					
@@ -56,7 +51,7 @@
 									<h2>Fast To Learn</h2>
 									<a href='http://wiki.github.com/camping/camping/short-example'>
 										<p>Learning Camping only requires basic Ruby skills. </p>
-										<img src='img/slides/ruby.gif'>
+										<img height="188px" src='img/slides/ruby.png'>
 									</a>
 <pre class="brush: ruby; toolbar: false; gutter: false;">
 require 'camping'
@@ -92,7 +87,7 @@ end
 								<div class="slide">
 									<h2>Camping Model Persistence Is Up To You</h2>
 									<a href='#'>
-										<p>Although Camping has an affinity for ActiveRecord, you can use your favorite ORM with it (e.g. MongoDB)</p>
+										<p>Although Camping has an affinity for ActiveRecord, you can use your favorite ORM with it (e.g. MongoMapper to acces MongoDB)</p>
 									</a>
 									<p>If you choose ActiveRecord, Camping will manage a default Sqlite database and let you define schema migrations using classes.</p>
 <pre class="brush: ruby; toolbar: false; gutter: false;">
@@ -121,14 +116,6 @@ end
 									</ul>
 								</div>
 							
-								<div class="slide">
-									<h2>Camping Runs On IronRuby Too</h2>
-									<a href='http://blog.monnet-usa.com/?p=166'>
-										<p>IronRuby can run Camping web apps on IIS using IronRack</p>
-										<img src='http://blog.monnet-usa.com/wp-content/ironcamping.png'>
-									</a>
-								</div>
-								
 								<div class="slide">
 									<h2>Camping Controllers Are Easy</h2>
 									<a href='#http://rdoc.info/rdoc/camping/camping/blob/fa8802511fd745dedcbeab61d809ddf15af80e43/Camping/Controllers.html'>
@@ -167,13 +154,21 @@ end
 								</div>
 								
 								<div class="slide">
-									<h2>Camping Was Created By _Why</h2>
+									<h2>Camping Was Created By _why</h2>
 									<a href='http://en.wikipedia.org/wiki/Why_the_lucky_stiff'>
 										<p>Why The Lucky Stiff originally created Camping. 
 										The community is active and continues to evolve the framework.</p>
 									</a>
 									<img src='./img/slides/the.foxes-4c.png' />
 								</div>	
+								
+								<div class="slide">
+									<h2>Camping Runs On IronRuby Too!</h2>
+									<a href='http://blog.monnet-usa.com/?p=166'>
+										<p>IronRuby can run Camping web apps on IIS using IronRack</p>
+										<img src='http://blog.monnet-usa.com/wp-content/ironcamping.png'>
+									</a>
+								</div>
 								
 							</div>
 						</div>
@@ -185,22 +180,21 @@ end
 						</script>
 					</div>
 			
-								
-			<a href="http://github.com/camping/camping">
-				<div id='callout-go-camping' >
-					<span>Go<br/>Camping<br/>With Us!</span>
-				</div>
-			</a>
-			<a href="http://wiki.github.com/camping/camping/">
-				<div id='callout-learn-camping' >
-					<span>Check-Out<br/>The<br/>Camping Guide</span>
-				</div>
-			</a>
-			<a href="http://rubyforge.org/mailman/listinfo/camping-list">
-				<div id='callout-join-in' >
-					<span>Visit<br/>The<br/>Community</span>
-				</div>
-			</a>
+			<div id="camping-panel-canvas">&nbsp;</div>
+			<div id="camping-panel">
+				<ul>
+					<li>
+						<div id="call-to-action">Go Camping With Us!</div>
+						<div id="camping-install">
+<pre class="brush: ruby; toolbar: false; gutter: false;">
+gem install camping</pre>
+						<div>
+					</li>
+					<li><a href="http://rubyforge.org/mailman/listinfo/camping-list">Community</a></li>
+					<li><a href="http://github.com/camping/camping">Code</a></li>
+					<li><a href="http://www.whywentcamping.com">Documentation</a></li>
+				</ul>
+			</div>
 		</div>
 	</body>
 
